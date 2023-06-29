@@ -1,19 +1,18 @@
 {
   "expo": {
-    "name": "todo-list-app",
-    "slug": "todo-list-app",
+    "name": "ToDoer",
+    "slug": "ToDoer",
+    "scheme": "todoer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -21,10 +20,39 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.legendman.ToDoer"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/not-icon.png",
+          "color": "#00ccc7"
+        }
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "legendman"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e5c9b902-6eac-48d6-8bdf-474f80421f77"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/e5c9b902-6eac-48d6-8bdf-474f80421f77",
+      "checkAutomatically": "ON_ERROR_RECOVERY"
     }
   }
 }
